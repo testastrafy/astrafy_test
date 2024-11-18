@@ -1,5 +1,9 @@
 ### ASTRAFY.IO TEST
 
+Link to looker Studio Dashboard below:
+
+https://lookerstudio.google.com/u/3/reporting/bd08ee9e-447f-4c0b-af41-55a70ce267a0/page/UztTE
+
 
 ### Explanation
 
