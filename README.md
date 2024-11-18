@@ -84,14 +84,17 @@ All this information can be found in the table `dbt_tastrafy_reporting.sales_per
 Exercice 5:
 
 Orders are segmented into 3 groups:
-● New: it's the 1st order of the customer (client_id) in the past 12 months. In
+
+- New: it's the 1st order of the customer (client_id) in the past 12 months. In
 the 12 months prior to this order, the customer did not place any orders
-● Returning: it's between the 2nd and the 4th order of the customer in the
+
+- Returning: it's between the 2nd and the 4th order of the customer in the
 past 12 months. In the 12 months prior to this order, the customer had
 already placed between 1 and 3 orders
-● VIP: it's the 5th or more order of the customer in the past 12 months. In the 12
-months prior to this order, the customer had already placed at least 4
-orders or more
+
+- VIP: it's the 5th or more order of the customer in the past 12 months. In the 12
+months prior to this order, the customer had already placed at least 4 orders or more
+
 Calculate for each order placed in 2023, the segment of this order.
 
 For exercice 5, the logic applied to get the order segmentation can be found in the model int_orders_segmentation_2023.sql inside intermediate folder.
