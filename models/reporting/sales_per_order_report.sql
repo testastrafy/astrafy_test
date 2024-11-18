@@ -5,9 +5,10 @@
     )
 }}
 
-select  
+SELECT  
       date_date
     , customers_id
     , orders_id
+    , CA_ht
     , qty_product
-from {{ ref('int_sales_per_order') }}
+FROM {{ ref('int_sales_per_order') }}

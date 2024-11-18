@@ -6,13 +6,13 @@
     )
 }}
 
-select 
-      {{ dbt_utils.generate_surrogate_key(['date_date', 'customers_id', 'orders_id']) }} as surrogate_key
+SELECT 
+      {{ dbt_utils.generate_surrogate_key(['date_date', 'customers_id', 'orders_id']) }} AS surrogate_key
     , date_date
     , customers_id
     , orders_id
     , CA_ht
-from {{ ref('orders_recrutement') }}
+FROM {{ ref('orders_recrutement') }}
 
 
 
