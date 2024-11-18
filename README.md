@@ -8,7 +8,7 @@ Try running the following commands:
 
 ### Explanation
 
-For this task, we got tthe data from two different files that have been loaded into our DBT project as seed files:
+For this task, we got the data from two different files that have been loaded into our DBT project as seed files:
 - orders_recrutement.csv
 - sales_recrutement.csv
 
@@ -16,12 +16,12 @@ After uploading the files into our DBT project I have created multiple models, d
 The way this is divided is:
 
 - Staging: Where I have "opened" the CSV files. Here you can find the following models:
-    - stg_orders_recrutement ( you can also find a yml file containing a description for the model and the different columns )
-    - stg_sales_recrutement ( you can also find a yml file containing a description for the model and the different columns )
+    - stg_orders_recrutement ( you can also find a .yml file containing a description for the model and the different columns )
+    - stg_sales_recrutement ( you can also find a .yml file containing a description for the model and the different columns )
 
 - Intermediate: Where you can find the following models:
-    - int_sales_per_order where I have joined the information from the two staging models
-    - int_orders_segmentation_2023 only using information from stg_orders_recrutement to complete Question 5 and 6.
+    - int_sales_per_order where I have joined the information from the two staging models and will be used in sales_per_order_report ( you can also find a .yml file containing a description for the model and the different columns )
+    - int_orders_segmentation_2023 only using information from stg_orders_recrutement which will be used in orders_segmentation_2023_report ( you can also find a .yml file containing a description for the model and the different columns )
 
 - Reporting: Where you can find the following models:
     - sales_per_order_report which I have used to complete Questions 1, 2, 3 and 4.
