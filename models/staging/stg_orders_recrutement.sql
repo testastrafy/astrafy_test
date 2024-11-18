@@ -1,6 +1,9 @@
 {{
     config(
-        materialized = 'table',
+        materialized = 'incremental',
+        unique_key='surrogate_key',
+        partition_by={"field": "date_date", "data_type": "DATE"},
+        cluster_by=["customers_id", "orders_id"], 
         enabled = true,
         persist_docs={"relation": true, "columns": true}
     )
@@ -14,7 +17,9 @@ SELECT
     , CA_ht
 FROM {{ ref('orders_recrutement') }}
 
-
+{% if is_incremental() %}
+    WHERE date_date > (SELECT MAX(date_date) FROM {{ this }})
+{% endif %}
 
 
 

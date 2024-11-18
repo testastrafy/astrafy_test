@@ -22,7 +22,8 @@ The way this is divided is:
     - sales_per_order_report which I have used to complete Questions 1, 2, 3 and 4.
     - orders_segmentation_2023_report which I have used to complete Question 5 and 6.
 
-I have also used dbt package dbt_utils and created one test. In relation to the test, it is failing as there is one transaction_id that it is found in the sales table, but it is not corresponding to any order.
+I have also used dbt package dbt_utils and created one test. In relation to the test, it is failing as there is one transaction_id that it is found in the sales table, but it is not corresponding to any order. 
+I am rounding to 0 CA_ht from orders and turnover from sales to compare these two columns as the should match as well. 
 
 
 Exercice 1: What is the number of orders in the year 2023?
