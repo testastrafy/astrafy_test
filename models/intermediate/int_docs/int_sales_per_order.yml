@@ -1,0 +1,18 @@
+version: 2
+
+models:
+  - name: int_sales_per_order
+    description: This model contains data from the join of orders and sales information. 
+    columns:
+      - name: date_date 
+        description: date when order was made.
+      - name: customers_id 
+        description: ID of the customer associated to the order. 
+      - name: orders_id 
+        description: ID of the order for each customer and date.
+      - name: products_id 
+        description: ID of the product associated to each of the transactions and clients.
+      - name: turnover
+        description: total amount of the products sold associated to each transacion and client.
+      - name: total_products
+        description: total products sold associated to each product ID.

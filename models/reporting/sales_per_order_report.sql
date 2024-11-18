@@ -11,6 +11,5 @@ select
     , orders_id
     , products_id
     , turnover
-    , qty
-    , CA_ht
+    , total_products
 from {{ ref('int_sales_per_order') }}

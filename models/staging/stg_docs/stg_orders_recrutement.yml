@@ -1,0 +1,19 @@
+version: 2
+
+models:
+  - name: stg_orders_recrutement
+    description: This model contains data from seed table orders_recrutement.csv and shows the orders per customers and the total amount associated per order by date.
+    columns:
+      - name: surrogate_key
+        description: Unique identifier for the model.
+        tests:
+          - unique
+          - not_null
+      - name: date_date 
+        description: date when order was made.
+      - name: customers_id 
+        description: ID of the customer associated to the order. 
+      - name: orders_id 
+        description: ID of the order for each customer and date.
+      - name: CA_ht
+        description: total amount associated to each order.
