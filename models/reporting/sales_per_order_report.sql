@@ -1,6 +1,6 @@
 {{
     config(
-        materialized = 'view',
+        materialized = 'table',
         enabled = true
     )
 }}
@@ -9,7 +9,5 @@ select
       date_date
     , customers_id
     , orders_id
-    , products_id
-    , turnover
-    , total_products
+    , qty_product
 from {{ ref('int_sales_per_order') }}
