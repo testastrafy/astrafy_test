@@ -1,0 +1,23 @@
+version: 2
+
+models:
+  - name: stg_sales_recrutement
+    description: This model contains data from seed table sales_recrutement.csv and shows the quantity of products associated to each transaction, for each client per date.
+    columns:
+      - name: surrogate_key
+        description: Unique identifier for the model.
+        tests:
+          - unique
+          - not_null
+      - name: date_date
+        description: date when sales was made.
+      - name: client_id
+        description: ID of the client the transaction is associated to.
+      - name: transaction_id 
+        description: ID transaction associated to each of the clients and products.
+      - name: products_id 
+        description: ID of the product associated to each of the transactions and clients.
+      - name: turnover
+        description: total amount of the products sold associated to each transacion and client.
+      - name: total_products
+        description: total products sold associated to each product ID.

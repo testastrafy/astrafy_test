@@ -5,14 +5,18 @@
     )
 }}
 
-select  
-      o.date_date
+SELECT  
+      s.date_date
     , customers_id
     , orders_id
-    , products_id
-    , turnover
-    , qty
     , CA_ht
-from {{ ref('stg_orders_recrutement') }} as o 
-left join {{ ref('stg_sales_recrutement') }} as s 
-    on o.orders_id = s.transaction_id
+    , sum(total_products) AS qty_product
+FROM {{ ref('stg_sales_recrutement') }} AS s 
+LEFT JOIN  {{ ref('stg_orders_recrutement') }} AS o 
+    ON  s.transaction_id = o.orders_id 
+GROUP BY 
+      s.date_date
+    , customers_id
+    , orders_id
+    , CA_ht
+
