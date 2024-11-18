@@ -2,8 +2,6 @@
     config(
         materialized = 'incremental',
         unique_key='surrogate_key',
-        partition_by={"field": "date_date", "data_type": "DATE"},
-        cluster_by=["client_id", "transaction_id", "products_id"], 
         enabled = true,
         persist_docs={"relation": true, "columns": true}
     )
